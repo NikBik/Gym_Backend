@@ -1,5 +1,6 @@
 package com.example.Gym.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,11 +30,12 @@ public class WorkoutService {
 	 * @param request Workout request data
 	 * @return The created Workout entity
 	 */
-	public Workout createWorkout(WorkoutRequest request) {
+	public Workout createWorkout(Long userId, Long programId, String details) {
 		Workout workout = new Workout();
-		workout.setUserId(request.getUserId());
-		workout.setProgramId(request.getProgramId());
-		workout.setDetails(request.getDetails());
+		workout.setUserId(userId);
+		workout.setProgramId(programId);
+		workout.setDetails(details);
+		workout.setWorkoutDate(LocalDate.now());
 		return workoutDao.save(workout);
 	}
 
@@ -64,5 +66,11 @@ public class WorkoutService {
 		} catch (Exception e) {
 			throw new Exception("Unable to find Out any memberships");
 		}
+	}
+
+	public List<Workout> getWorkoutDetails(Long id) {
+		List<Workout> workoutList = new ArrayList<Workout>();
+		workoutList = workoutDao.findByUserId(id);
+		return workoutList;
 	}
 }

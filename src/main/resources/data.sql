@@ -1,10 +1,4 @@
--- Insert dummy data into the membership table
 
-INSERT INTO membership (user_id, plan_id, start_date, end_date) VALUES
-(1, 101, '2024-01-01', '2024-02-01'),
-(2, 102, '2024-01-15', '2024-02-15'),
-(3, 103, '2024-02-01', '2024-03-01'),
-(4, 104, '2024-03-01', '2024-04-01');
 
 -- Insert dummy data into the gym_class table
 
@@ -16,11 +10,11 @@ INSERT INTO gym_class (name, schedule) VALUES
 
 -- Insert dummy data into the workout table
 
-INSERT INTO workout (user_id, program_id, details) VALUES
-(1, 201, 'Completed 30 minutes of cardio, 15 minutes of stretching.'),
-(2, 202, 'Completed strength training with focus on legs and back.'),
-(3, 203, 'Participated in advanced yoga class.'),
-(4, 204, 'Did a full-body workout with emphasis on upper body.');
+INSERT INTO workout (user_id, program_id, details, workout_date) VALUES
+(1, 201, 'Completed 30 minutes of cardio, 15 minutes of stretching.', '2023-01-05'),
+(2, 202, 'Completed strength training with focus on legs and back.','2023-01-05'),
+(3, 203, 'Participated in advanced yoga class.','2023-01-05'),
+(4, 204, 'Did a full-body workout with emphasis on upper body.','2023-01-05');
 
 -- Insert dummy data into the equipment table
 
@@ -45,3 +39,11 @@ INSERT INTO GYM_PROGRAMS (PROGRAM_NAMES, DESCRIPTION, CHARGES, PERIOD) VALUES
 ('Pre/Post-Natal Fitness', 'Fitness programs tailored for pre and post-natal women to maintain health and fitness during and after pregnancy.', 35.00, 'Per Class'),
 ('Virtual Fitness Classes', 'Online workout sessions including a variety of classes like yoga, HIIT, and strength training.', 15.00, 'Per Class'),
 ('Fitness Workshops', 'Workshops on various fitness topics including advanced techniques and wellness strategies.', 40.00, 'Per Workshop');
+
+-- Insert sample data into the membership table
+
+INSERT INTO membership (user_id, plan_id, start_date, end_date) VALUES
+(1, 1, '2024-01-01', '2024-02-01'),
+(2, 2, '2024-01-15', '2024-02-15'),
+(3, 3, '2024-02-01', '2024-03-01'),
+(1, 5, '2024-03-01', '2024-04-01');

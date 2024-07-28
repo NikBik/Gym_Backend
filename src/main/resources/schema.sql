@@ -16,7 +16,8 @@ CREATE TABLE workout (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     user_id BIGINT NOT NULL,
     program_id BIGINT NOT NULL,
-    details TEXT
+    details TEXT,
+	workout_date date not null
 );
 
 CREATE TABLE equipment (
