@@ -25,9 +25,9 @@ INSERT INTO equipment (name, status) VALUES
 ('Elliptical Trainer', 'Available');
 
 INSERT INTO users (USER_NAME,  FIRST_NAME , LAST_NAME , PASSWORD , LAST_LOGIN) VALUES
-('omy', 'Om', 'Doe', 'omy123', CURRENT_TIMESTAMP),
-('niket', 'Niket', 'Sourabh', 'niket123', CURRENT_TIMESTAMP),
-('nikbik', 'NikBik', 'Johnson', 'nikbik123', CURRENT_TIMESTAMP);
+('omy', 'Om', 'Doe', 'dumbbellsparadise123', CURRENT_TIMESTAMP),
+('niket', 'Niket', 'Sourabh', 'dumbbellsparadise123', CURRENT_TIMESTAMP),
+('nikbik', 'NikBik', 'Johnson', 'dumbbellsparadise123', CURRENT_TIMESTAMP);
 
 -- Insert example programs
 INSERT INTO GYM_PROGRAMS (PROGRAM_NAMES, DESCRIPTION, CHARGES, PERIOD) VALUES
